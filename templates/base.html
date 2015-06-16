@@ -1,0 +1,171 @@
+<!doctype html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+<html  lang="en" ng-app="app"> <!--<![endif]-->
+
+
+<head>
+
+    <!-- Basic -->
+    <title>WhatsAppMe</title>
+
+    <!-- Define Charset -->
+    <meta charset="utf-8">
+
+    <!-- Responsive Metatag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Page Description and Author -->
+    <meta name="description" content="Margo - Responsive HTML5 Template">
+    <meta name="author" content="iThemesLab">
+
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="/static/asset/css/bootstrap.min.css" type="text/css" media="screen">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/static/whatsapapme-style/css/font-awesome.min.css" type="text/css" media="screen">
+
+    <!-- Margo CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="/static/whatsapapme-style/css/style.css" media="screen">
+
+    <!-- Responsive CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="/static/whatsapapme-style/css/responsive.css" media="screen">
+
+    <!-- Css3 Transitions Styles  -->
+    <link rel="stylesheet" type="text/css" href="/static/whatsapapme-style/css/animate.css" media="screen">
+
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="/static/whatsapapme-style/css/colors/red.css" title="red" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/static/whatsapapme-style/whatsappme-style.css"  media="screen" />
+<link rel="stylesheet" type="text/css" href="/static/asset/plugins/intl-tel-input/build/css/intlTelInput.css">
+
+    <!-- Margo JS  -->
+    <script type="text/javascript" src="/static/asset/plugins/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.migrate.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/modernizrr.js"></script>
+    <script type="text/javascript" src="/static/asset/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/nivo-lightbox.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.appear.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/count-to.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.textillate.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.lettering.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/jquery.parallax.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/mediaelement-and-player.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/script.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/angular/angular.js"></script>
+    <script type="text/javascript" src="/static/asset/plugins/angular/angular-route.js"></script> 
+    <!-- services upload -->
+    <script type="text/javascript" src="/static/app/services/user_manager/userservices.js"></script>
+    <!-- end -->
+    <script type="text/javascript" src="/static/app/app.js"></script>
+    <script type="text/javascript" src="/static/app/controllers/spaceController.js"></script>
+
+
+
+  
+    <!--[if IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+</head>
+
+<body  class="whatsappme_body">
+
+
+    <!-- Full Body Container -->
+    <div id="container">
+        
+        
+        <!-- Start Header Section --> 
+        <div class="hidden-header"></div>
+        <header class="clearfix">
+
+            
+            
+            <!-- Start  Logo & Naviagtion  -->
+            <div class="navbar navbar-default navbar-top whatsappme-navbar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- Stat Toggle Nav Link For Mobiles -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- End Toggle Nav Link For Mobiles -->
+                        <a class="navbar-brand whatsappme-name" href="/{{user.username}}">
+                            <img alt="" src="/static/images/logo.png" class="whatsappme-logo">
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <!-- Stat Search -->
+                        <div class="search-side">
+                            
+                        
+                            
+                        </div>
+                        <!-- End Search -->
+                        <!-- Start Navigation List -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                             <a class="whatsappme-user-username" >{{user.username}} <i class="fa fa-angle-down"></i></a>
+                             <ul class="dropdown">
+                                    <li><a class="active" href="/{{user.username}}/#/settings/"> <i class="fa fa-cog"></i>Profile settings</a>
+                                    </li>
+                                    <li><a href="index-01.html"></a>
+                                    </li>
+                                    <li><a href="/user/sign-out"><i class="fa fa-sign-out"></i> Sign out</a>
+                                    </li>
+                                  
+                                    </li>
+                                </ul>
+                            </li>
+                           
+                          
+                        </ul>
+                        <!-- End Navigation List -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Logo & Naviagtion -->
+            
+        </header> 
+        <!-- End Header Section -->
+
+
+        <div class="row whatsappme_body ">
+        <div class="col-md-12 whatsappme_space service-box ">
+            <div class="col-md-2 service-center">
+                <div class="list-group">
+<strong>Options</strong>
+         <div >
+         tab1
+        </div>
+        <div >
+         tab2
+        </div>
+        <div >
+         tab3
+        </div>
+ </div>
+            </div>
+            <div class="col-md-8" style="background-color:white">
+            <div data-ng-view >
+        
+            </div>
+                   </div>
+           
+            
+        </div>
+                
+            </div>
+     
+        
+       
+    
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+{% extends "home.html" %}
+
+{% block content %}
+
+<div class="col-md-3"></div>
+<div class="col-md-6  animated4" style="margin-top:80px;">
+<h1>Join whatsappme <h1>
+
+<p> The bet way to start sharing your products ,your services , your job offers on WhatsApp </p>
+<div class="col-md-8 whatsappme-well ">
+
+<form method="post"  class="form  ">
+<div class="form-group">
+    {% csrf_token %}
+    {{ form2.as_p }}
+    <br>
+    <input type="submit" class="btn btn-system btn-large whatsappme-signip" value="Sign in" />
+ </div>
+</form>
+</div>	
+<div class="col-md-4" style="margin-top:50px;">
+
+	<p> Or if you wanna just getting whatsapped inscribe your number here <p>
+	<form class="form" id="inscribe_form" >
+<div class="form-group">
+    {% csrf_token %}
+    {{ form1.as_p }}
+    <span id="valid-msg" class="hide" style="color: green;font-size: 20px;">✓ Valid</span>
+    <span id="error-msg" class="hide" style="color: red;font-size: 20px;">Invalid number</span>
+    <br>
+    <button  class="btn btn-system btn-large whatsappme-signip" onclick="post()"> WhatsAppMe</button> 
+ </div>
+</form>
+</div>
+
+
+
+
+</div>
+<div class="col-md-3"></div>
+
+
+<script type="text/javascript">
+	// var username=document.getElementById("id_username").className+="form-control whatsappme-username";
+	// var password=document.getElementById("id_passwrod").className+="form-control whatsappme-username";
+	// var number_phone=document.getElementById("id_number_phone").className+="form-control whatsappme-username";
+	var company_username=document.getElementById("id_company_username").className+="form-control whatsappme-username";
+	var company_password=document.getElementById("id_company_password").className+="form-control whatsappme-username";var company_number_phone=document.getElementById("id_company_number_phone").className+="form-control whatsappme-username";
+	var body=document.getElementById("body").className+="whatsappme_body" ;	
+
+
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/static/asset/plugins/intl-tel-input/build/js/intlTelInput.min.js"></script>
+<script>
+  //$("#id_number_phone").intlTelInput();
+
+  
+
+var telInput = $("#id_number_phone"),
+  errorMsg = $("#error-msg"),
+  validMsg = $("#valid-msg");
+
+// initialise plugin
+telInput.intlTelInput({
+  utilsScript: "/static/asset/plugins/intl-tel-input/lib/libphonenumber/build/utils.js"
+});
+
+// on blur: validate
+telInput.blur(function() {
+  if ($.trim(telInput.val())) {
+    if (telInput.intlTelInput("isValidNumber")) {
+      validMsg.removeClass("hide");
+    } else {
+      telInput.addClass("error");
+      errorMsg.removeClass("hide");
+      validMsg.addClass("hide");
+    }
+  }
+});
+
+// on keydown: reset
+telInput.keydown(function() {
+  telInput.removeClass("error");
+  errorMsg.addClass("hide");
+  validMsg.addClass("hide");
+});
+
+function post(){
+	 if (telInput.intlTelInput("isValidNumber")){
+	 	   telInput.val(telInput.intlTelInput("getNumber"));
+	 	   document.getElementById("inscribe_form").setAttribute("method", "post");
+	 	   document.getElementById("inscribe_form").setAttribute("action","/user/subscribe");
+           document.getElementById("inscribe_form").submit();
+	 }else{
+	
+	 	
+	 }
+}
+
+
+</script>
+{% endblock %}

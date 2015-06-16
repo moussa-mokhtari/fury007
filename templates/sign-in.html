@@ -1,0 +1,28 @@
+
+
+
+{% extends "home.html" %}
+
+{% block content %}
+<div class="col-md-4"></div>
+<div class="col-md-4 animated4">
+	
+	<form method="post" action="/user/sign-in" class="form whatsappme-well ">
+<div class="form-group">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <input type="submit" class="btn btn-system btn-large whatsappme-signip" value="Sign in" />
+  </div>
+</form>
+</div>
+<div class="col-md-4"></div>
+
+
+<script type="text/javascript">
+	var username=document.getElementById("id_username").className+="form-control whatsappme-username";
+	var password=document.getElementById("id_password").className+="form-control whatsappme-username";
+	var body=document.getElementById("body").className+="whatsappme_body" ;	
+</script>
+
+{%endblock%}
